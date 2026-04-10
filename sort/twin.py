@@ -1,12 +1,16 @@
-n=int(input())
-a=list(map(int,input().split()))
-b=a[0]
-c=1
-for i in range(1,n):
-    while b<=sum(a)//2:
-        c+=1
-        b+=a[i]
+n = int(input())
+a = list(map(int, input().split()))
+
+a.sort(reverse=True)
+
+b = 0        
+c = 0         
+total = sum(a) 
+
+for i in range(n):
+    b += a[i]  
+    c += 1
+    if b > total // 2:  
+        break
 
 print(c)
-
-
