@@ -1,0 +1,7 @@
+n=int(input())
+count=0
+bills=[100,20,10,5,1]
+for b in bills:
+    count=count+n//b
+    n=n%b
+print(count)
